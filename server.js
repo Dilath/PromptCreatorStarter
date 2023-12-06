@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // get OPENAI_API_KEY from GitHub secrets
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
-openai = new OpenAI({apiKey: OPENAI_API_KEY});
+let openai = new OpenAI({apiKey: OPENAI_API_KEY});
 
 // Middleware to parse JSON payloads in POST requests
 app.use(express.json());
